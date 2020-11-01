@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Brexit Countdown',
         theme: ThemeData(
           primarySwatch: Colors.blue,
@@ -113,10 +114,10 @@ class _myCountdown extends State<Countdown> {
           Text(time_left.toString(),
             style: TextStyle(
                 color: Colors.white,
-                fontSize: 20
+                fontSize: 30
             ),
           ),
-          Container(height: 20,),
+          Container(height: 60,),
           buttons()
         ],
       ),
@@ -136,7 +137,7 @@ class _myCountdown extends State<Countdown> {
           color: Colors.grey,
         ),
         Expanded(
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               RaisedButton(
